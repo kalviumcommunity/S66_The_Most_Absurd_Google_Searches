@@ -1,0 +1,15 @@
+{
+  "name": "my_asap",
+  "version": "1.0.0",
+  "description": "\"The Most Absurd Google Searches\" is a fun and interactive web application that allows users to submit, vote on, and comment on the most bizarre and absurd Google search queries they've made or come across. The goal is to create a platform where users can engage with each other by contributing to a shared list of hilarious and unexpected searches.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
