@@ -13,7 +13,22 @@ app.get("/ping", (req, res) => {
     res.json({ message: "pong" });
 });
 
-// Starting the server
-app.listen(PORT, () => {
+// Global Error Handler
+app.use((err, req, res, next) => {
+    console.error("Server Error:", err);
+    res.status(500).json({ message: "Internal Server Error" });
+});
+
+// Starting the server with error handling
+const server = app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+// Handle server startup errors
+server.on("error", (error) => {
+    if (error.code === "EADDRINUSE") {
+        console.error(`Port ${PORT} is already in use. Please use a different port.`);
+    } else {
+        console.error("Server failed to start:", error);
+    }
 });
