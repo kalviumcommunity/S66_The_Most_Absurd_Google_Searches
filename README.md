@@ -1,6 +1,6 @@
 ## 🔗 Deployed Backend
 The backend is deployed on Render:  
-https://s66-asap-backend.onrender.com
+https://s66-asap-backend.onrender.com/ping
 
 
 # The Most Absurd Google Searches
